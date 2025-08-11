@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { FaMosque } from "react-icons/fa";
+import { FaBookOpen } from "react-icons/fa";
 
 interface SplashScreenProps {
   onGetStarted: () => void;
@@ -63,8 +63,8 @@ const SplashScreen = ({ onGetStarted }: SplashScreenProps) => {
           transition={{ delay: 0.2, duration: 0.8, type: "spring", stiffness: 200 }}
         >
           <div className="relative">
-            <div className="w-32 h-32 mx-auto mb-6 bg-gradient-primary rounded-3xl flex items-center justify-center glow-accent shadow-elegant">
-              <FaMosque className="text-5xl text-primary-foreground" />
+            <div className="w-32 h-32 mx-auto mb-6 bg-gradient-accent rounded-3xl flex items-center justify-center glow-accent shadow-elegant">
+              <FaBookOpen className="text-5xl text-accent-foreground" />
             </div>
             <motion.div
               className="absolute inset-0 w-32 h-32 mx-auto rounded-3xl border-3 border-accent/40"
