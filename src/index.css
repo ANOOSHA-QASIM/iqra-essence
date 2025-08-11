@@ -8,62 +8,80 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Islamic Dark Theme - Elegant & Modern */
-    --background: 220 25% 8%;
-    --foreground: 45 15% 85%;
+    /* Light Islamic Theme - Elegant & Accessible */
+    --background: 45 25% 97%;  /* Off-white background */
+    --foreground: 220 15% 15%; /* Dark gray text */
 
-    --card: 220 20% 12%;
-    --card-foreground: 45 15% 85%;
+    --card: 0 0% 100%;         /* Pure white cards */
+    --card-foreground: 220 15% 15%;
 
-    --popover: 220 20% 12%;
-    --popover-foreground: 45 15% 85%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
 
-    /* Deep Forest Green - Primary */
-    --primary: 155 30% 15%;
-    --primary-foreground: 45 80% 90%;
-    --primary-glow: 155 40% 25%;
+    /* Soft Green - Primary */
+    --primary: 155 35% 45%;    /* Soft green #4A9B7A */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 155 45% 55%;
 
-    /* Deep Navy - Secondary */
-    --secondary: 220 40% 18%;
-    --secondary-foreground: 45 15% 85%;
+    /* Pastel Blue - Secondary */
+    --secondary: 220 30% 85%;  /* Light pastel blue */
+    --secondary-foreground: 220 15% 15%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 45 10% 65%;
+    --muted: 220 10% 90%;      /* Very light gray */
+    --muted-foreground: 220 10% 45%;
 
     /* Gold Accent */
-    --accent: 45 80% 60%;
-    --accent-foreground: 220 25% 8%;
-    --accent-glow: 45 90% 70%;
+    --accent: 45 70% 55%;      /* Gold #C9A34A */
+    --accent-foreground: 0 0% 100%;
+    --accent-glow: 45 80% 65%;
 
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 45 15% 85%;
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 25%;
-    --input: 220 15% 18%;
-    --ring: 45 80% 60%;
+    --border: 220 10% 85%;     /* Light border */
+    --input: 0 0% 100%;        /* White input background */
+    --ring: 155 35% 45%;       /* Primary green for focus rings */
 
     --radius: 0.75rem;
 
     /* Islamic Geometric Patterns */
-    --pattern-primary: 155 30% 15%;
-    --pattern-secondary: 220 40% 18%;
-    --pattern-accent: 45 80% 60%;
+    --pattern-primary: 155 35% 45%;
+    --pattern-secondary: 220 30% 85%;
+    --pattern-accent: 45 70% 55%;
 
-    /* Gradients */
+    /* Light Theme Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--muted)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--card)));
     --gradient-surface: linear-gradient(180deg, hsl(var(--card)), hsl(var(--background)));
 
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.2);
-    --shadow-card: 0 4px 20px -4px hsl(var(--background) / 0.5);
+    /* Light Theme Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.1);
+    --shadow-card: 0 4px 20px -4px hsl(220 10% 50% / 0.1);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .dark {
+    /* Dark mode overrides if needed */
+    --background: 220 25% 8%;
+    --foreground: 45 15% 85%;
+    --card: 220 20% 12%;
+    --card-foreground: 45 15% 85%;
+    --primary: 155 30% 15%;
+    --primary-foreground: 45 80% 90%;
+    --secondary: 220 40% 18%;
+    --secondary-foreground: 45 15% 85%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 45 10% 65%;
+    --accent: 45 80% 60%;
+    --accent-foreground: 220 25% 8%;
+    --border: 220 15% 25%;
+    --input: 220 15% 18%;
   }
 }
 
@@ -78,12 +96,12 @@ All colors MUST be HSL.
     min-height: 100vh;
   }
 
-  /* Islamic Geometric Background Pattern */
+  /* Light Islamic Geometric Background Pattern */
   .islamic-pattern {
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--pattern-accent) / 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(var(--pattern-primary) / 0.1) 0%, transparent 50%);
-    background-size: 100px 100px;
+      radial-gradient(circle at 25% 25%, hsl(var(--pattern-accent) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--pattern-primary) / 0.05) 0%, transparent 50%);
+    background-size: 120px 120px;
   }
 
   /* Custom scrollbar */
@@ -106,22 +124,22 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Hero Button Variant */
+  /* Hero Button Variant - Light Theme */
   .btn-hero {
     @apply bg-gradient-to-r from-accent to-accent-glow text-accent-foreground 
-           hover:shadow-lg hover:shadow-accent/25 transition-all duration-300
-           border border-accent/20 backdrop-blur-sm;
+           hover:shadow-lg hover:shadow-accent/20 transition-all duration-300
+           hover:scale-105 border border-accent/30 font-semibold;
   }
 
-  /* Glass Card Effect */
+  /* Light Glass Card Effect */
   .glass-card {
-    @apply bg-card/80 backdrop-blur-lg border border-border/50 
-           shadow-lg shadow-background/20;
+    @apply bg-card/95 backdrop-blur-sm border border-border 
+           shadow-card hover:shadow-elegant transition-all duration-300;
   }
 
-  /* Glow Effect */
+  /* Light Glow Effect */
   .glow-accent {
-    box-shadow: 0 0 20px hsl(var(--accent) / 0.3);
+    box-shadow: 0 0 30px hsl(var(--accent) / 0.15);
   }
 
   /* Text Gradients */
