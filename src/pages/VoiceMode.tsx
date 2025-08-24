@@ -39,8 +39,8 @@ const VoiceMode = () => {
   };
 
   return (
-    <div className={`min-h-screen bg-background ${isMobile ? 'pb-20 pt-4' : 'pt-20'}`}>
-      <div className="container mx-auto px-4 py-8 max-w-3xl">
+    <div className={`min-h-screen ${isMobile ? 'pb-20 pt-4' : 'pt-20'}`}>
+      <div className="container mx-auto px-4 py-6 max-w-2xl">
         {/* Header */}
         <motion.div
           className="text-center mb-8"
@@ -48,10 +48,10 @@ const VoiceMode = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-3xl md:text-4xl font-bold text-gradient-accent mb-4">
+          <h1 className="text-2xl md:text-3xl font-bold text-gradient-accent mb-2">
             Voice Mode
           </h1>
-          <p className="text-xl text-muted-foreground leading-relaxed">
+          <p className="text-muted-foreground">
             Speak naturally and get detailed explanations
           </p>
         </motion.div>
@@ -63,8 +63,8 @@ const VoiceMode = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1, duration: 0.6 }}
         >
-          <Button variant="outline" size="lg" className="border-accent/30 hover:bg-accent hover:text-accent-foreground text-lg px-8 py-4">
-            <FaLanguage className="mr-3 text-xl" />
+          <Button variant="outline" className="border-accent/20 hover:bg-accent/10">
+            <FaLanguage className="mr-2" />
             English
           </Button>
         </motion.div>
@@ -79,10 +79,10 @@ const VoiceMode = () => {
           <div className="relative">
             {/* Animated Microphone */}
             <motion.div
-              className={`w-40 h-40 mx-auto rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 ${
+              className={`w-32 h-32 mx-auto rounded-full flex items-center justify-center cursor-pointer transition-all duration-300 ${
                 isListening 
-                  ? 'bg-gradient-accent glow-accent shadow-elegant' 
-                  : 'bg-gradient-primary hover:scale-110 shadow-card'
+                  ? 'bg-gradient-accent glow-accent' 
+                  : 'bg-gradient-primary hover:scale-105'
               }`}
               onClick={toggleListening}
               animate={isListening ? {
