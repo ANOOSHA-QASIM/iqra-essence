@@ -8,57 +8,80 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Dark Navy Blue Theme */
-    --background: 210 43% 10%;     /* #101820 Dark Navy Blue */
-    --foreground: 0 0% 100%;       /* #FFFFFF White */
+    /* Light Islamic Theme - Elegant & Accessible */
+    --background: 45 25% 97%;  /* Off-white background */
+    --foreground: 220 15% 15%; /* Dark gray text */
 
-    --card: 210 33% 15%;           /* #182430 Slightly lighter dark blue */
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;         /* Pure white cards */
+    --card-foreground: 220 15% 15%;
 
-    --popover: 210 33% 15%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
 
-    /* Deep Blue - Primary */
-    --primary: 213 87% 43%;        /* #2563EB Deep Blue */
+    /* Soft Green - Primary */
+    --primary: 155 35% 45%;    /* Soft green #4A9B7A */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 213 93% 68%;   /* #3B82F6 Bright Blue */
+    --primary-glow: 155 45% 55%;
 
-    /* Dark Grayish Blue - Secondary */
-    --secondary: 210 24% 16%;      /* #1F2937 Dark Grayish Blue */
-    --secondary-foreground: 0 0% 100%;
+    /* Pastel Blue - Secondary */
+    --secondary: 220 30% 85%;  /* Light pastel blue */
+    --secondary-foreground: 220 15% 15%;
 
-    --muted: 220 14% 82%;          /* #D1D5DB Light Gray */
-    --muted-foreground: 220 9% 68%; /* #9CA3AF Gray */
+    --muted: 220 10% 90%;      /* Very light gray */
+    --muted-foreground: 220 10% 45%;
 
-    /* Cyan Accent */
-    --accent: 188 78% 56%;         /* #22D3EE Cyan */
+    /* Gold Accent */
+    --accent: 45 70% 55%;      /* Gold #C9A34A */
     --accent-foreground: 0 0% 100%;
-    --accent-glow: 199 89% 75%;    /* #7DD3FC Light cyan hover */
+    --accent-glow: 45 80% 65%;
 
     --destructive: 0 65% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 24% 16%;         /* Dark border */
-    --input: 210 33% 15%;          /* Dark input background */
-    --ring: 188 78% 56%;           /* Cyan for focus rings */
+    --border: 220 10% 85%;     /* Light border */
+    --input: 0 0% 100%;        /* White input background */
+    --ring: 155 35% 45%;       /* Primary green for focus rings */
 
     --radius: 0.75rem;
 
-    /* Dark Theme Gradients */
+    /* Islamic Geometric Patterns */
+    --pattern-primary: 155 35% 45%;
+    --pattern-secondary: 220 30% 85%;
+    --pattern-accent: 45 70% 55%;
+
+    /* Light Theme Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--card)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--muted)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--card)));
     --gradient-surface: linear-gradient(180deg, hsl(var(--card)), hsl(var(--background)));
 
-    /* Dark Theme Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.25);
-    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.15);
-    --shadow-card: 0 4px 20px -4px hsl(210 43% 5% / 0.3);
+    /* Light Theme Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 40px hsl(var(--accent) / 0.1);
+    --shadow-card: 0 4px 20px -4px hsl(220 10% 50% / 0.1);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .dark {
+    /* Dark mode overrides if needed */
+    --background: 220 25% 8%;
+    --foreground: 45 15% 85%;
+    --card: 220 20% 12%;
+    --card-foreground: 45 15% 85%;
+    --primary: 155 30% 15%;
+    --primary-foreground: 45 80% 90%;
+    --secondary: 220 40% 18%;
+    --secondary-foreground: 45 15% 85%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 45 10% 65%;
+    --accent: 45 80% 60%;
+    --accent-foreground: 220 25% 8%;
+    --border: 220 15% 25%;
+    --input: 220 15% 18%;
   }
 }
 
@@ -73,11 +96,11 @@ All colors MUST be HSL.
     min-height: 100vh;
   }
 
-  /* Dark Geometric Background Pattern */
+  /* Light Islamic Geometric Background Pattern */
   .islamic-pattern {
     background-image: 
-      radial-gradient(circle at 25% 25%, hsl(var(--accent) / 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, hsl(var(--primary) / 0.03) 0%, transparent 50%);
+      radial-gradient(circle at 25% 25%, hsl(var(--pattern-accent) / 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(var(--pattern-primary) / 0.05) 0%, transparent 50%);
     background-size: 120px 120px;
   }
 
@@ -101,22 +124,22 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Hero Button Variant - Dark Theme */
+  /* Hero Button Variant - Light Theme */
   .btn-hero {
     @apply bg-gradient-to-r from-accent to-accent-glow text-accent-foreground 
-           hover:shadow-lg hover:shadow-accent/30 transition-all duration-300
+           hover:shadow-lg hover:shadow-accent/20 transition-all duration-300
            hover:scale-105 border border-accent/30 font-semibold;
   }
 
-  /* Dark Glass Card Effect */
+  /* Light Glass Card Effect */
   .glass-card {
     @apply bg-card/95 backdrop-blur-sm border border-border 
            shadow-card hover:shadow-elegant transition-all duration-300;
   }
 
-  /* Dark Glow Effect */
+  /* Light Glow Effect */
   .glow-accent {
-    box-shadow: 0 0 30px hsl(var(--accent) / 0.2);
+    box-shadow: 0 0 30px hsl(var(--accent) / 0.15);
   }
 
   /* Text Gradients */
