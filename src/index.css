@@ -8,39 +8,39 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Islamic Dark Theme - Elegant & Modern */
-    --background: 220 25% 8%;
-    --foreground: 45 15% 85%;
+    /* Islamic Light-Dark Theme - Enhanced Visibility */
+    --background: 220 20% 15%;
+    --foreground: 45 20% 95%;
 
-    --card: 220 20% 12%;
-    --card-foreground: 45 15% 85%;
+    --card: 220 18% 22%;
+    --card-foreground: 45 20% 95%;
 
-    --popover: 220 20% 12%;
-    --popover-foreground: 45 15% 85%;
+    --popover: 220 18% 25%;
+    --popover-foreground: 45 20% 95%;
 
-    /* Deep Forest Green - Primary */
-    --primary: 155 30% 15%;
-    --primary-foreground: 45 80% 90%;
-    --primary-glow: 155 40% 25%;
+    /* Soft Emerald Green - Primary */
+    --primary: 155 35% 35%;
+    --primary-foreground: 45 100% 98%;
+    --primary-glow: 155 45% 45%;
 
-    /* Deep Navy - Secondary */
-    --secondary: 220 40% 18%;
-    --secondary-foreground: 45 15% 85%;
+    /* Soft Navy - Secondary */
+    --secondary: 220 35% 30%;
+    --secondary-foreground: 45 20% 95%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 45 10% 65%;
+    --muted: 220 12% 35%;
+    --muted-foreground: 45 15% 80%;
 
-    /* Gold Accent */
-    --accent: 45 80% 60%;
-    --accent-foreground: 220 25% 8%;
-    --accent-glow: 45 90% 70%;
+    /* Bright Gold Accent */
+    --accent: 45 85% 65%;
+    --accent-foreground: 220 20% 10%;
+    --accent-glow: 45 95% 75%;
 
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 45 15% 85%;
+    --destructive: 0 62.8% 55%;
+    --destructive-foreground: 45 20% 95%;
 
-    --border: 220 15% 25%;
-    --input: 220 15% 18%;
-    --ring: 45 80% 60%;
+    --border: 220 15% 35%;
+    --input: 220 15% 28%;
+    --ring: 45 85% 65%;
 
     --radius: 0.75rem;
 
