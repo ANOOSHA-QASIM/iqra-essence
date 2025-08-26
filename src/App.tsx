@@ -17,6 +17,7 @@ import Premium from "./pages/Premium";
 // Components
 import Navigation from "./components/Navigation";
 import LanguageModal from "./components/LanguageModal";
+import Footer from "./components/Footer";
 
 const queryClient = new QueryClient();
 
@@ -57,17 +58,20 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen islamic-pattern">
+        <div className="min-h-screen islamic-pattern flex flex-col">
           <BrowserRouter>
             <Navigation />
-            <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/chat" element={<ChatMode />} />
-              <Route path="/voice" element={<VoiceMode />} />
-              <Route path="/tafseer" element={<TafseerMode />} />
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/premium" element={<Premium />} />
-            </Routes>
+            <main className="flex-1">
+              <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route path="/chat" element={<ChatMode />} />
+                <Route path="/voice" element={<VoiceMode />} />
+                <Route path="/tafseer" element={<TafseerMode />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/premium" element={<Premium />} />
+              </Routes>
+            </main>
+            <Footer />
           </BrowserRouter>
         </div>
         <Toaster />

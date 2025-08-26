@@ -15,10 +15,17 @@ const VoiceMode = () => {
   const toggleListening = () => {
     setIsListening(!isListening);
     if (!isListening) {
+      // API will be integrated here
+      // This would start voice recording and connect to speech-to-text API
+      
       // Simulate listening
       setTimeout(() => {
         setTranscription("What is the meaning of Ayat al-Kursi?");
         setIsListening(false);
+        
+        // API will be integrated here
+        // This would send the transcribed text to the Quranic AI API
+        
         // Simulate AI response
         setTimeout(() => {
           setResponse("Ayat al-Kursi is one of the most powerful verses in the Quran, found in Surah Al-Baqarah verse 255. It speaks about Allah's supreme authority, His eternal nature, and His all-encompassing knowledge...");

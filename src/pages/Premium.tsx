@@ -225,6 +225,13 @@ const Premium = () => {
                     plan.isPopular ? 'btn-hero' : 'border-accent/20 hover:bg-accent/10'
                   }`}
                   disabled={plan.name === 'Free'}
+                  onClick={() => {
+                    if (plan.name === 'Premium') {
+                      // Stripe integration will be added here
+                      // This would initiate the Stripe checkout process
+                      console.log("Stripe checkout would be initiated here");
+                    }
+                  }}
                 >
                   {plan.buttonText}
                 </Button>

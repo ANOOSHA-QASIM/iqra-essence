@@ -18,6 +18,8 @@ const TafseerMode = () => {
   const isMobile = useIsMobile();
   const [selectedSurah, setSelectedSurah] = useState<number | null>(null);
 
+  // API will be integrated here
+  // This would fetch the list of surahs from the Quran API
   const surahs = [
     { number: 1, name: "Al-Fatihah", arabic: "الفاتحة", verses: 7, meaning: "The Opening" },
     { number: 2, name: "Al-Baqarah", arabic: "البقرة", verses: 286, meaning: "The Cow" },
@@ -90,7 +92,11 @@ const TafseerMode = () => {
                       className={`w-full justify-between p-3 h-auto hover:bg-primary/10 ${
                         selectedSurah === surah.number ? 'bg-primary/20 border-accent/50' : ''
                       }`}
-                      onClick={() => setSelectedSurah(surah.number)}
+                      onClick={() => {
+                        setSelectedSurah(surah.number);
+                        // API will be integrated here
+                        // This would fetch verses and tafseer for the selected surah
+                      }}
                     >
                       <div className="text-left">
                         <div className="flex items-center space-x-3">

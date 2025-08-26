@@ -136,6 +136,8 @@ const Dashboard = () => {
                 Listen
               </Button>
             </div>
+            {/* API will be integrated here */}
+            {/* This would fetch a daily verse and its tafseer from the Quran API */}
             <div className="space-y-4">
               <div className="text-right font-arabic text-xl text-accent leading-relaxed">
                 وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا

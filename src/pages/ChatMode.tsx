@@ -42,6 +42,9 @@ const ChatMode = () => {
     setInputValue("");
     setIsTyping(true);
 
+    // API will be integrated here
+    // This would call the Quranic AI API with the user's question
+    
     // Simulate AI response
     setTimeout(() => {
       const aiMessage: Message = {
